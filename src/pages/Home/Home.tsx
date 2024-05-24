@@ -19,8 +19,8 @@ const Home = (): JSX.Element => {
             {mainArticles && <MainNews article={mainArticles[0]} />}
           </div>
           {mainArticles?.slice(1).map((article) => (
-            <div className="col col-3">
-              <NewsCard key={article.id} article={article} />
+            <div key={article.id} className="col col-3">
+              <NewsCard article={article} />
             </div>
           ))}
         </div>
