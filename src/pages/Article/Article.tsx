@@ -27,7 +27,7 @@ const Article = (): JSX.Element => {
         <Ads />
         <div className="container">
           <div className="row">
-          {article && (<div className="col col-12">{article.text}</div>)}
+            {article && <div className="col col-12">{article.text}</div>}
           </div>
         </div>
       </article>
