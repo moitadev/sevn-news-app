@@ -27,7 +27,13 @@ const Article = (): JSX.Element => {
         <Ads />
         <div className="container">
           <div className="row">
-            {article && <div className="col col-12">{article.text}</div>}
+            {article && (
+              <div className="col col-12">
+                {article.text?.split('\n').map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </article>
