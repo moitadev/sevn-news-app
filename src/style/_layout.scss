@@ -76,4 +76,14 @@ a {
   }
 }
 
-
+.category-bg- {
+  &diversidade {
+    background-color: $diversity!important;
+  }
+  &economia {
+    background-color: $economy!important;
+  }
+  &educacao {
+    background-color: $education!important;
+  }
+}
