@@ -10,6 +10,7 @@ const Ads = ({ bgImageURL }: AdsProps): JSX.Element => {
       <div className="row">
         <div className="col col-12">
           <div
+            role="adsdialog"
             className={style.box}
             style={bgImageURL ? { backgroundImage: `url(${bgImageURL})` } : {}}
           >
