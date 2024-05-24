@@ -45,5 +45,4 @@ Isso iniciará o servidor de desenvolvimento do Vite. A aplicação estará disp
 - `preview`: Visualiza a aplicação compilada localmente.
 - `test`: Executa os testes.
 
-
-Esse README.md fornece uma visão geral da aplicação frontend, incluindo tecnologias utilizadas, instruções de instalação e execução, scripts disponíveis, estrutura do projeto e informações sobre contribuição e licença.
+Esse README.md fornece uma visão geral da aplicação frontend, incluindo tecnologias utilizadas, instruções de instalação e execução, scripts disponíveis.
