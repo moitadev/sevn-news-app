@@ -1,6 +1,14 @@
 import { Ads, MainNews, Navbar, NewsCard, NewsList } from '@/components'
+import { useQuery } from '@tanstack/react-query'
+import type { Article } from '@/Types'
+import { fetchMainArticles } from '@/fetchers/articles'
 
 const Home = (): JSX.Element => {
+  const { data: mainArticles } = useQuery<Article[]>({
+    queryKey: ['mainArticles'],
+    queryFn: () => fetchMainArticles(),
+  })
+
   return (
     <>
       <Navbar home />
@@ -8,14 +16,13 @@ const Home = (): JSX.Element => {
       <main className="container">
         <div className="row row-spacing">
           <div className="col col-6">
-            <MainNews />
+            {mainArticles && <MainNews article={mainArticles[0]} />}
           </div>
-          <div className="col col-3">
-            <NewsCard />
-          </div>
-          <div className="col col-3">
-            <NewsCard />
-          </div>
+          {mainArticles?.slice(1).map((article) => (
+            <div className="col col-3">
+              <NewsCard key={article.id} article={article} />
+            </div>
+          ))}
         </div>
         <div className="row row-spacing">
           <div className="col col-12">
