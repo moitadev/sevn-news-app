@@ -7,7 +7,9 @@
   flex-direction: column;
   small {
     font-weight: 700;
-    color: $accent
+    &.date {
+      color: $accent;
+    }
   }
   h2 {
     font-weight: 400;
@@ -17,8 +19,7 @@
     flex-direction: column;
     gap: 10px;
     small {
-        text-transform: uppercase;
-        color: $economy;
+      text-transform: uppercase;
     }
   }
 }
