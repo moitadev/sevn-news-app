@@ -1,13 +1,12 @@
 @use '@/style/variables' as *;
 
 .mainNews {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding-right: 15px;
-    small {
-        text-transform: uppercase;
-        font-weight: 700;
-        color: $economy;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 15px;
+  small {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 }

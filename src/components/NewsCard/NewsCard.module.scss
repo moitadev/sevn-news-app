@@ -33,12 +33,11 @@
     flex-direction: column;
     gap: 15px;
     small {
-        text-transform: uppercase;
-        color: $education;
-        font-weight: 700;
+      text-transform: uppercase;
+      font-weight: 700;
     }
     h4 {
-        margin-top: auto;
+      margin-top: auto;
     }
   }
 }
