@@ -1,5 +1,12 @@
+import { Ads, Navbar } from '@/components'
+
 const Home = (): JSX.Element => {
-  return <h1>SEVN News</h1>
+  return (
+    <>
+      <Navbar home />
+      <Ads />
+    </>
+  )
 }
 
 export { Home }
