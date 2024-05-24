@@ -15,9 +15,13 @@ const NewsCard = ({ article }: NewsProps): JSX.Element => {
       <Link to={`/${article.id}`}>
         <div className={style.cardImage}>
           {article.image ? (
-            <img src={article.image} className={style.image} alt="" />
+            <img
+              src={article.image}
+              className={style.image}
+              alt={article.title}
+            />
           ) : (
-            <Camera width="48px" height="48px" />
+            <Camera width="48px" height="48px" role="camera-icon" />
           )}
         </div>
       </Link>
