@@ -12,7 +12,7 @@ const Navbar = ({ home }: HeaderProps): JSX.Element => {
       {!home && (
         <div className={style.backButton}>
           <Link to="/">
-            <ArrowLeft />
+            <ArrowLeft role="arrow-left" />
           </Link>
         </div>
       )}
