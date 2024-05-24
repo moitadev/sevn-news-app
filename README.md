@@ -19,7 +19,7 @@ Este projeto é uma aplicação frontend feita como parte de um teste técnico p
 1. **Clone o repositório:**
 
    ```sh
-   git clone https://github.com/seu-usuario/sevn-news-app.git
+   git clone https://github.com/moitadev/sevn-news-app/
    cd sevn-news-app
    ```
 
