@@ -1,0 +1,41 @@
+@use '@/style/variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  .cardImage {
+    width: 100%;
+    height: 190px;
+    background-color: $background-secondary;
+    border-radius: $radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $accent;
+    overflow: hidden;
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: $slow-transition;
+      &:hover {
+        transform: scale(1.1);
+        transition: $slow-transition;
+      }
+    }
+  }
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    small {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    h4 {
+      margin-top: auto;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use '@/style/variables' as *;
+
+.header {
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  .logo {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 29.9px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12px 0;
+    a {
+      &:hover {
+        color: $text;
+      }
+    }
+  }
+  .backButton {
+    background-color: $text;
+    padding: 15px;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    a {
+      svg {
+        path {
+          transition: $regular-transition;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            stroke: $primary;
+            transition: $regular-transition;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+:root {
+  background-color: $background;
+  color: $text;
+  transition: $regular-transition;
+  letter-spacing: 0.2px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  min-height: 100%;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba($color: $primary, $alpha: 0.6);
+  transition: $regular-transition;
+  border: 0px none;
+  border-radius: 19px;
+  &:hover {
+    background: rgba($color: $primary, $alpha: 0.8);
+    transition: $regular-transition;
+  }
+  &:active {
+    background: $primary;
+    transition: $regular-transition;
+  }
+}
+::-webkit-scrollbar-track {
+  background: $background-secondary;
+  border: 0px none $background;
+  border-radius: 55px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::selection {
+  background-color: $primary;
+  color: $background;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: $text;
+  transition: $regular-transition;
+  &:hover {
+    color: $primary;
+    transition: $regular-transition;
+  }
+}
+
+.category-title- {
+  &diversidades {
+    color: $diversity;
+  }
+  &economia {
+    color: $economy;
+  }
+  &educacao {
+    color: $education;
+  }
+}
+
+.category-bg- {
+  &diversidades {
+    background-color: $diversity!important;
+  }
+  &economia {
+    background-color: $economy!important;
+  }
+  &educacao {
+    background-color: $education!important;
+  }
+}

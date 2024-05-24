@@ -1,0 +1,19 @@
+@use '@/style/variables' as *;
+
+.box {
+  background-color: $background-secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: $radius;
+  margin: 32px 0;
+  background-size: cover;
+  background-position: center;
+  height: 190px;
+  .adsHeading {
+    font-size: 33px;
+    line-height: 42.9px;
+    color: $accent;
+  }
+}

@@ -1,0 +1,57 @@
+.container {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.row-spacing {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.col {
+  flex: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    min-width: calc(100% / 12) * $i;
+    max-width: calc(100% / 12) * $i;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .row-spacing {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .row {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .col {
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
