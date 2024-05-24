@@ -15,3 +15,10 @@ export const fetchSecondaryArticles = async () => {
 
   return secondaryArticles
 }
+
+export const fetchArticle = async (id: string | undefined) => {
+  const response = await axios.get(`http://localhost:3000/news/article/${id}`)
+  const article = response.data
+
+  return article
+}
