@@ -21,6 +21,10 @@ html {
 h1 {
   font-size: 58px;
   line-height: 60px;
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
 h2 {
