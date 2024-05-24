@@ -1,35 +1,32 @@
 import { Link } from 'react-router-dom'
 import { Camera } from '../icons'
 import style from './NewsCard.module.scss'
+import { NewsProps } from '@/Types'
 
 const removeAccents = (str: string) => {
   return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
 }
 
-const NewsCard = (): JSX.Element => {
-  const bgImageURL =
-    'https://conteudo.imguol.com.br/c/entretenimento/a7/2021/04/12/aula-na-pandemia-covid-escola-1618259816196_v2_900x506.jpg'
-  const category = 'Educação'
-  const normalizedCategory = removeAccents(category).toLowerCase()
+const NewsCard = ({ article }: NewsProps): JSX.Element => {
+  const normalizedCategory = removeAccents(article.category).toLowerCase()
 
   return (
     <div className={style.card}>
-      <Link to="/2">
+      <Link to={`/${article.id}`}>
         <div className={style.cardImage}>
-          {bgImageURL ? (
-            <img src={bgImageURL} className={style.image} alt="" />
+          {article.image ? (
+            <img src={article.image} className={style.image} alt="" />
           ) : (
             <Camera width="48px" height="48px" />
           )}
         </div>
       </Link>
       <div className={style.cardBody}>
-        <small className={`category-title-${normalizedCategory}`}>Educação</small>
+        <small className={`category-title-${normalizedCategory}`}>
+          {article.category}
+        </small>
         <h4>
-          <Link to="/2">
-            Datafolha: após ensino remoto, 76% precisam de reforço na
-            alfabetização
-          </Link>
+          <Link to={`/${article.id}`}>{article.title}</Link>
         </h4>
       </div>
     </div>
