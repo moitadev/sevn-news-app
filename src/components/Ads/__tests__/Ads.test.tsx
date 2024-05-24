@@ -23,6 +23,6 @@ describe('Ads component', () => {
   it('renders a heading when no image is provided', () => {
     setup('')
 
-    expect(screen.getByRole('heading', { level: 2 })).toBeTruthy()
+    expect(screen.getByRole('heading', { level: 2 })).not.toBeFalsy()
   })
 })
