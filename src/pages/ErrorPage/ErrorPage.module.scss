@@ -1,0 +1,25 @@
+@use '@/style/variables' as *;
+
+.mainWrapper {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  .back {
+    padding: 12px 20px;
+    color: $text;
+    background-color: $primary;
+    border-radius: $radius;
+    transition: $regular-transition;
+    border: 0;
+    font-weight: 700;
+    &:hover {
+      background-color: rgba($color: $primary, $alpha: 0.7);
+      transition: $regular-transition;
+      cursor: pointer;
+    }
+  }
+}
